@@ -1,5 +1,10 @@
 import {createGlobalStyle} from 'styled-components';
 
+export const colors = {
+  greyish: '#333',
+  whiteish: '#fff',
+}
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -77,13 +82,13 @@ const GlobalStyle = createGlobalStyle`
 
   .book-list .title {
     font-weight: bold;
-    color: #333;
+    color: ${colors.greyish};
     font-size: 1.2em;
   }
 
   .book-list .author {
     font-size: 0.9em;
-    color: #333
+    color: ${colors.greyish};
   }
 
   .empty {
@@ -102,7 +107,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 10px;
     box-sizing: border-box;
     margin: 6px 0;
-    color: #333;
+    color: ${colors.greyish};
     border: 2px;
     border-radius: 4px;
     border-style: dashed;
@@ -115,6 +120,11 @@ const GlobalStyle = createGlobalStyle`
     border-style: dashed;
     padding: 6px 20px;
     display: block;
+  }
+/* Theming Class */
+  .dark {
+    background: ${colors.greyish};
+    color: ${colors.whiteish};
   }
 
 `;
