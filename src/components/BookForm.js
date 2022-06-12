@@ -6,8 +6,8 @@ const BookForm = ({}) => {
   const [author, setAuthor] = useState('')
   const {dispatch} = useContext(BookContext)
 
-  const handleSubmit = (eco) => {
-    eco.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault()
     dispatch({type:'ADD_BOOK', book: { author, title} })
     setTitle('')
     setAuthor('')
